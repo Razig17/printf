@@ -93,6 +93,7 @@ int get_specifier(const char *s, va_list args)
 		{ 's', print_string },
 		{ 'd', print_decimal},
 		{ 'i', print_decimal},
+		{ 'r', print_rev},
 		{ '\0', NULL }
 	};
 	unsigned int i = 0;

@@ -15,6 +15,7 @@ int print_char(va_list args);
 int get_specifier(const char *s, va_list args);
 int print_decimal(va_list args);
 int print_i(int n);
+int print_rev(va_list args);
 
 /**
  * struct format_specfier - is a struct that contains two members
