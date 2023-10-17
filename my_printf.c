@@ -8,7 +8,7 @@
   * @format: format passed to the function
   *
   * Return: number of charactar printed
-  */
+*/
 
 int _printf(const char *format, ...)
 {
