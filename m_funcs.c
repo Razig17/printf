@@ -51,7 +51,7 @@ int print_char(va_list args)
   * Return: the lenght of the string or -1
   */
 
-int print_string(char * args)
+int print_string(char *args)
 {
 	char *str = args;
 
@@ -72,14 +72,15 @@ int print_string(char * args)
 }
 
 /**
-  * get_specifier - is a functoin that used to specifey what formating function to call
+  * get_specifier - is used to specifey what formating function to call
   * @s: is the string
   * @args: it's the parameter that reprsent the arguments of the function
   *
   * Return: a function call or 0
   *
 */
-int get_specifier(const char *s, va_list args) {
+int get_specifier(const char *s, va_list args)
+{
 	format_s formats[] = {
 		{ 'c', print_char },
 		{ 's', print_string },
@@ -100,7 +101,7 @@ int get_specifier(const char *s, va_list args) {
 		if (formats[i].specifier == *s)
 		{
 
-			return (formats[i].f(args) );
+			return (formats[i].f(args));
 
 		}
 		i++;
