@@ -89,10 +89,12 @@ int p_rot(va_list args)
 			if (*s == rots[i])
 			{
 				c = rotc[i];
+				_putchar(c);
 				len += 1;
 				break;
 			}
 		}
+		s++;
 	}
 	return (len);
 }
