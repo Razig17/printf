@@ -35,6 +35,8 @@ int _printf(const char *format, ...)
 			count++; }
 		else
 		{
+			if (args == NULL)
+				return (-1);
 			count += get_specifier(format, args);
 		}}}
 	va_end(args);
