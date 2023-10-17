@@ -1,4 +1,5 @@
 #include"main.h"
+#include <stdio.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -40,7 +41,11 @@ int _strlen(char *s)
 
 int print_char(va_list args)
 {
-	_putchar((int)args);
+	int i;
+
+	i = va_arg(args, int);
+
+	_putchar(i);
 	return (1);
 }
 
@@ -51,23 +56,25 @@ int print_char(va_list args)
   * Return: the lenght of the string or -1
   */
 
-int print_string(char *args)
+int print_string(va_list args)
 {
-	char *str = args;
+	char *str = va_arg (args, char *);
+	int count = 0;
 
 	if (str == NULL)
 	return (-1);
 
+	count = _strlen(str);
 	for (; *str; str++)
 	{
-		if (str == '\0')
+		if (*str == '\0')
 		break;
 
 	_putchar(*str);
 
 	}
 
-	return (_strlen(args));
+	return (count);
 
 }
 
@@ -100,7 +107,6 @@ int get_specifier(const char *s, va_list args)
 	{
 		if (formats[i].specifier == *s)
 		{
-
 			return (formats[i].f(args));
 
 		}

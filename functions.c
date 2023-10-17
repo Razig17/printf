@@ -12,7 +12,7 @@ int print_decimal(va_list args)
 {
 	int n1, count = 0;
 
-	n1 = (int)args;
+	n1 = va_arg(args, int);
 	if (n1 < 0)
 	{
 		n1 = -n1;
@@ -21,7 +21,6 @@ int print_decimal(va_list args)
 	}
 	count++;
 	if ((n1 / 10) > 0)
-		count += print_decimal((char *)(n1 / 10));
 	_putchar((n1 % 10) + '0');
 	return (count);
 }

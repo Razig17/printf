@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	for (; *format; format++)
 	{
-		if (format == '\0')
+		if (*format == '\0')
 			break;
 	if (*format != '%')
 	{
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			count++; }
 		else
 		{
-			count += get_specifier(format, va_arg(args, char *));
+			count += get_specifier(format,args);
 		}}}
 	va_end(args);
 	return (count);
