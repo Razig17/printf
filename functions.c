@@ -84,10 +84,7 @@ int p_rot(va_list args)
 
 	while (*s)
 	{
-		if ((*s < 65 && *s > 90) || (*s < 97 && *s > 122))
-			_putchar(*s);
-		if (*s == ' ')
-			_putchar(' ');
+
 		for (i = 0; i <= 52; i++)
 		{
 			if (*s == rots[i])
@@ -97,6 +94,8 @@ int p_rot(va_list args)
 				len += 1;
 				break;
 			}
+			_putchar(c);
+			len++;
 		}
 		s++;
 	}
