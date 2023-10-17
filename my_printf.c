@@ -10,6 +10,12 @@
   * Return: number of charactar printed
   */
 
+int main(void)
+{
+	char i[] = "marcus";
+	_printf("%R\n", i[3]);
+	return (0);
+}
 int _printf(const char *format, ...)
 {
 	int count = 0;

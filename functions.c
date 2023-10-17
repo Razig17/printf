@@ -64,3 +64,35 @@ int print_rev(va_list args)
 	return (len);
 
 }
+
+/**
+ * p_rot
+ *
+ * @args:the string
+ * Return: number of charactars printed
+*/
+
+int p_rot(va_list args)
+{
+	char *s = va_arg(args, char *);
+	int i;
+	char c;
+	int len = 0;
+
+	char rots[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rotc[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	while (*s)
+	{
+		for (i = 0; i <= 52; i++)
+		{
+			if (*s == rots[i])
+			{
+				c = rotc[i];
+				len += 1;
+				break;
+			}
+		}
+	}
+	return (len);
+}
