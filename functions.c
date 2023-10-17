@@ -19,7 +19,7 @@ int print_decimal(va_list args)
 /**
  * print_i - print a number
  *
- * n:  input of fucnction
+ * @n:  input of fucnction
  *
  * Return: returns number of charactars printed
  */
