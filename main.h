@@ -1,5 +1,5 @@
 #ifndef MAIN_H
-#define MAIN_H
+11;rgb:0000/0000/0000#define MAIN_H
 
 #include <stdarg.h>
 #include <unistd.h>
@@ -14,7 +14,7 @@ int print_string(va_list args);
 int print_char(va_list args);
 int get_specifier(const char *s, va_list args);
 int print_decimal(va_list args);
-
+int print_i(int n);
 
 /**
  * struct format_specfier - is a struct that contains two members

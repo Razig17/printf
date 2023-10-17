@@ -58,7 +58,7 @@ int print_char(va_list args)
 
 int print_string(va_list args)
 {
-	char *str = va_arg (args, char *);
+	char *str = va_arg(args, char *);
 	int count = 0;
 
 	if (str == NULL)
