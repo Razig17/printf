@@ -20,9 +20,8 @@ int print_decimal(va_list args)
 		count++;
 	}
 	count++;
-	if ((n1 / 10) > 0){
+	if ((n1 / 10) > 0)
 		count += print_decimal((char *)(n1 / 10));
-	}
 	_putchar((n1 % 10) + '0');
 	return (count);
 }

@@ -18,20 +18,25 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (0);
 	va_start(args, format);
-	for (; *format; format++){
-        if (format == '\0')
-	break;
-	if (*format != '%'){
+	for (; *format; format++)
+	{
+		if (format == '\0')
+			break;
+	if (*format != '%')
+	{
 		_putchar(*format);
-			count++;}
-	else {
+			count++; }
+	else
+	{
 		format++;
-		if (*format == '%'){
+		if (*format == '%')
+		{
 			_putchar('%');
-			count++;}
-		else {
-			count += get_specifier(format,va_arg(args,char *));
-			}}
+			count++; }
+		else
+		{
+			count += get_specifier(format, va_arg(args, char *));
+		}}}
 	va_end(args);
 	return (count);
 }
