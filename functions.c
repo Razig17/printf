@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_decimal - print a number
  *
@@ -48,7 +49,6 @@ int print_i(int n)
  *
  *@args: the string
  * Return: returns number of charactars printed
-
  */
 
 int print_rev(va_list args)
@@ -66,7 +66,7 @@ int print_rev(va_list args)
 }
 
 /**
- * p_rot
+ * p_rot - function that implement rot13 encription
  *
  * @args:the string
  * Return: number of charactars printed
