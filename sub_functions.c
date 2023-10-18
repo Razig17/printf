@@ -29,6 +29,12 @@ int p_binary(int s)
 	int x = 0, y;
 
 	n2 = s;
+	if (n2 < 0)
+	{
+		_putchar('_');
+		n2 = -n2;
+		count++;
+	}
 
 	while (n2 > 0)
 	{
