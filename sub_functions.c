@@ -75,6 +75,7 @@ int print_s(va_list args)
 			if (i / 16 >= 10)
 				_putchar((i / 16) + 55);
 			else
+			{
 				_putchar((i / 16) + '0');
 			if (i % 16 >= 10)
 				_putchar((i % 16) + 55);
