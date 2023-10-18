@@ -42,8 +42,7 @@ int p_binary(int s)
 		_putchar(binary[y] + '0');
 		count += 1;
 	}
-	_putchar('\n');
-	return (0);
+	return (count);
 }
 #include "main.h"
 
