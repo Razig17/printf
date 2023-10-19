@@ -118,5 +118,5 @@ int get_specifier(const char *s, va_list args)
 
 	_putchar('%');
 	_putchar(*s);
-	return (0);
+	return (2);
 }
