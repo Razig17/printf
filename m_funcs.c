@@ -63,6 +63,8 @@ int print_string(va_list args)
 
 	if (str == NULL)
 	return (-1);
+	else if (str == (char *)0)
+		return (_printf("(null)"));
 
 	count = _strlen(str);
 	for (; *str; str++)
