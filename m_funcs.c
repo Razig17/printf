@@ -103,7 +103,6 @@ int get_specifier(const char *s, va_list args)
 
 
 
-
 	if (s == NULL)
 		return (0);
 
@@ -117,5 +116,7 @@ int get_specifier(const char *s, va_list args)
 		i++;
 	}
 
+	_putchar('%');
+	_putchar(*s);
 	return (0);
 }
